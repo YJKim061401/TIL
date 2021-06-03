@@ -1,4 +1,4 @@
-# class 기초개념
+# class 기초개념 복습
 
 ## class inheritance
 
