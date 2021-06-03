@@ -1,4 +1,4 @@
-# git command
+# git command 정리
 
 > 기본 명령어를 정리합니다.
 
