@@ -4,6 +4,10 @@
 
 ![Git - Git 기초](command.assets/areas.png)
 
+![img](command.assets/git_three_tree.png)
+
+
+
 ##### init
 
 `.git`  폴더를 생성해주는 명령어. 처음 한번만 실행합니다. 
