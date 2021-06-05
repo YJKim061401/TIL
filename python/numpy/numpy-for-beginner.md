@@ -1,6 +1,6 @@
 # numpy for beginner
 
-## 100문제 풀면서 까먹거나 중요한 내용 정리
+## array 
 
 ### 1. arange 
 
@@ -42,6 +42,26 @@ _like는 지정된 array의 shape 크기만큼 지정된 값으로 array를 채�
 2. create a **null**  vector of size 10
 
    `z = np.zeros(10)` 
+
+   
+
+   ## random
+
+   1. `np.random.randint(시작,n-1)` 
+
+      균일분포 정수 난수 1개 생성 
+
+   2. `np.random.rand(m,n)`
+
+      0부터 1사이의 균일분포 난수 matrix array 생성
+
+   3. `np.random.randn(m,n)` 
+
+      정규분포 난수 matrix array 생성 
+
+   
+
+   
 
    
 
