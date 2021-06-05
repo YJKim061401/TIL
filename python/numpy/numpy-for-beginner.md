@@ -51,13 +51,15 @@ _like는 지정된 array의 shape 크기만큼 지정된 값으로 array를 채�
 
       균일분포 정수 난수 1개 생성 
 
-   2. `np.random.rand(m,n)`
+   2. `np.random.rand((m,n)`
 
       0부터 1사이의 균일분포 난수 matrix array 생성
 
-   3. `np.random.randn(m,n)` 
+   3. `np.random.randn((m,n))`  
 
       정규분포 난수 matrix array 생성 
+
+   4. `np.random.random((m,n))` 
 
    
 
