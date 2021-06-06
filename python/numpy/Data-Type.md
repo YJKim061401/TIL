@@ -19,7 +19,15 @@
 
 * 3차원 이상의 배열 
 
-  ![img](Data-Type.assets/3-axis_front.png)	![img](Data-Type.assets/3-axis_block.png)
+  ![img](Data-Type.assets/3-axis_front.png)
+
+  
+
+  
+
+  ![img](Data-Type.assets/3-axis_block-20210606203648080.png)
+
+  
 
   𝑥∈R 3x2x5
 
@@ -37,7 +45,17 @@
 
 * Size : The total number of items in the tensor, the product shape vector. 
 
-  e.g. ![A 4-axis tensor](Data-Type.assets/4-axis_block.png)	A rank-4 tensor, shape : [3,2,4,5]![Keep track of what each axis is. A 4-axis tensor might be: Batch, Width, Height, Features](Data-Type.assets/shape2.png)
+  e.g. 
+
+  Shape [3,2,4,5]
+
+  ![A 4-axis tensor](Data-Type.assets/4-axis_block.png)
+
+  
+
+  
+
+  ![Keep track of what each axis is. A 4-axis tensor might be: Batch, Width, Height, Features](Data-Type.assets/shape2.png)
 
   
 
