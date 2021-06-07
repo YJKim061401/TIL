@@ -62,3 +62,54 @@
   
 
 ![Tensor Datatype and Ranks 1(i2tutorials)](Data-Type.assets/Tensor-Datatype-and-Ranks-1i2tutorials.jpg)
+
+## Axes
+
+Axes in multidimensional array
+
+![numpy_arrays](Data-Type.assets/numpy_arrays-1024x572.png)
+
+
+
+x column
+
+y row
+
+z depth
+
+>  a (depth,row,column) = a (z,y,x)와 대응 
+
+axis 0 = down
+
+axis 1 = across 
+
+> sum(axis)
+
+```python
+a = np.arange(24).reshape(2,3,4)
+[output]
+array([[[ 0,  1,  2,  3],
+        [ 4,  5,  6,  7],
+        [ 8,  9, 10, 11]],
+
+       [[12, 13, 14, 15],
+        [16, 17, 18, 19],
+        [20, 21, 22, 23]]])
+
+a.sum(axis = 0)
+[output]
+array([[12, 14, 16, 18],
+       [20, 22, 24, 26],
+       [28, 30, 32, 34]])
+
+a.sum(axis = 1)
+[output]
+array([[12, 15, 18, 21],
+       [48, 51, 54, 57]])
+
+a.sum(axis = 2)
+[output]
+array([[ 6, 22, 38],
+       [54, 70, 86]])
+```
+
