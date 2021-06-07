@@ -45,26 +45,31 @@ _like는 지정된 array의 shape 크기만큼 지정된 값으로 array를 채�
 
    
 
-   ## random
+   ## randoms
 
    1. `np.random.randint(시작,n-1)` 
 
       균일분포 정수 난수 1개 생성 
 
+      ```python
+      z1 = np.random.randint(0,10,10) # 0부터 9까지의 10개 난수 생성
+      [output]
+      [5 8 1 2 6 8 0 2 1 0]
+   
    2. `np.random.rand((m,n)`
-
+   
       0부터 1사이의 균일분포 난수 matrix array 생성
-
+   
    3. `np.random.randn((m,n))`  
-
+   
       정규분포 난수 matrix array 생성 
-
+   
    4. `np.random.random((m,n))` 
-
    
-
    
-
+   
+   
+   
    
 
 ## Array 합치기
