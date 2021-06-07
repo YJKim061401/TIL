@@ -134,3 +134,93 @@ np.split(x, 3)
 [array([0.,  1.,  2.]), array([3.,  4.,  5.]), array([6.,  7.,  8.])]
 ```
 
+## array 곱하기
+
+### np.dot(a1,a2)
+
+* if a1 and a2 are 1-D arrays, it is inner product of vectors
+
+  ```python
+  a = np.array([1,2,3])
+  b = np.array([4,5,6])
+  np.dot((a,b))
+  
+  [output]
+  32 = (4+10+18)
+  
+  a*b # 리스트처럼 곱해짐
+  
+  [output]
+  array([4.10,18])
+  ```
+
+* if a1 and a2 are 2-D arrays, it is matrix multiplication 
+
+* But using a1 @ a2 is preferred
+
+  ```python
+  a = np.array([[1,2],[3,4]])
+  b = np.array([[5,6],[7,8]])
+  
+  np.dot(a,b) # a@b
+  [output]
+  array([[19, 22],
+         [43, 50]])
+  ```
+
+  
+  * 행렬곱셈
+  * ![How to Multiply Matrices](numpy-for-beginner.assets/multiply-matrices.png)
+
+* if a is an N-D array and b is M-D array, it is a sum product over the last axis if a and the second-to-last axis of b
+
+* dot(a,b)[i,j,k,m] = sum(a[i,j,:]*b[k,:,m])
+
+```python
+a = np.arange(1,13).reshape(3,2,2)
+
+b = np.arange(12,24).reshape(2,2,3)
+print(a)
+print(b)
+np.dot(a,b)
+print(np.dot(a,b).shape)
+
+[output]
+a = [[[ 1  2]
+  [ 3  4]]
+
+ [[ 5  6]
+  [ 7  8]]
+
+ [[ 9 10]
+  [11 12]]]
+
+b = [[[12 13 14]
+  [15 16 17]]
+
+ [[18 19 20]
+  [21 22 23]]]
+
+np.dot = [[[[ 42  45  48]
+   [ 60  63  66]]
+
+  [[ 96 103 110]
+   [138 145 152]]]
+
+
+ [[[150 161 172]
+   [216 227 238]]
+
+  [[204 219 234]
+   [294 309 324]]]
+
+
+ [[[258 277 296]
+   [372 391 410]]
+
+  [[312 335 358]
+   [450 473 496]]]]
+
+(3, 2, 2, 3)
+```
+
