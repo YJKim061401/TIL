@@ -16,6 +16,11 @@ Data truth-telling
 
 * when you have only two datapoints 
 
+### Anscombe's Data Quartet
+
+* it shows how a pair of X and Y can have different values yet have differnt central tendency and correlation values (Francis, 1973)
+* ![img](Data-visualisation-concepts.assets/0*3fr0vsUvHYWMenhE.png)
+
 
 
 ## scatterplot 
