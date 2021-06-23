@@ -120,7 +120,9 @@ python + django + vscode / pycharm
 
 `PRAGMA table_info(app이름)`
 
-
+> 순서 (단순 Number) | 이름 | 형태 | notnull여부 | pk여부
+>
+> 1 | content | varcher(255) | 1 | 0
 
 
 
