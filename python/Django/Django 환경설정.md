@@ -54,6 +54,12 @@ python + django + vscode / pycharm
 
 `python3 manage.py startapp "app이름"`
 
+> application구조?
+>
+> 하나의 프로젝트에서 구현되는 기능을 개별로 나누기 위함
+>
+> 특정 기능에 대한 수정이나 문제 발생 시 다른 기능에 미치는 영향이 줄어듦 
+
 ### 12. Setting.py 에 app 추가
 
 프로젝트이름 > app이름 > setting.py
@@ -97,6 +103,16 @@ python + django + vscode / pycharm
 > 앞단계에서 생성한 app폴더에 index.html 생성해서 구현
 
 
+
+> MVC MVC?
+>
+> MVC : Model, View, Controller (설계 및 개발하는 소프트웨어 방법론)
+>
+> * Model : 데이터베이스, 어플리케이션 정보 등을 담는 데이터 집합소 (**models.py**)
+> * View : 사용자에게 보이는 화면 (**templates**)
+> * Controller : 사용자와 서버 간 인터페이스 역할, 로직 처리 (**views.py**)
+>
+> MTV : Model, Template, View (MVC와 같은 맥락)
 
 ## 모델 생성 후
 
