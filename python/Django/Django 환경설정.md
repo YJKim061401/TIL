@@ -114,6 +114,17 @@ python + django + vscode / pycharm
 >
 > MTV : Model, Template, View (MVC와 같은 맥락)
 
+
+
+> CRUD : Create, Read, Update, Delete
+>
+> 소프트웨어가 기본적으로 가져야 할 기능
+>
+> * create : 데이터를 만드는 기능, 데이터를 생성 서버에 저장
+> * read : 데이터를 읽도록 하는 기능
+> * update : 데이터를 갱신하도록 하는 기능, 수정할 수 있게 하는 기능
+> * Delete : 데이터를 지우는 기능, 특정 데이터 삭제
+
 ## 모델 생성 후
 
 #### Model.py 수정 후 장고 서버에 적용 
