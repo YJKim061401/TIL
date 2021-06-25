@@ -153,3 +153,7 @@ python + django + vscode / pycharm
 
 
 
+### admin 페이지 설정 
+
+`python manage.py createsuperuser`
+
