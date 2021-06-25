@@ -157,3 +157,8 @@ python + django + vscode / pycharm
 
 `python manage.py createsuperuser`
 
+
+
+##### NameError: name 'os' is not defined
+
+`import os` 로 해결
