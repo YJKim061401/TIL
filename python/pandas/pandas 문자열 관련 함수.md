@@ -48,3 +48,9 @@ df['column'].str.extract('( \w*시 )|( \w*군 )|( \w*구 )').dropna(how='all')
 df['new column'].loc[df['column'].str_contains('찾을 문자열')] = '그룹지을 문자열'
 ```
 
+
+
+```python
+df = df[['column_name','column_name']]
+```
+
