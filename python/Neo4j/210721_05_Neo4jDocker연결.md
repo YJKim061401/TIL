@@ -8,7 +8,10 @@ https://www.docker.com/resources/what-container : docker container에 대한 기
 
 https://docs.docker.com/get-docker/ : Get Docker 
 
+* 각 어플리케이션을 각각의 가상 머신에 배치하는 방법 사용
+* 가상 머신을 이용하면, 동일한 물리적 하드웨어에서 여러 어플리케이션 실행시키고 소프트웨어 구성 요소 간 충돌 최소한 유지 가능 
 
+#### docker desktop 
 
 ### 1. clone a repository 
 
