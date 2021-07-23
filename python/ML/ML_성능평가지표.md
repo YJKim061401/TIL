@@ -40,6 +40,33 @@ positive예측 성능에 더 초점을 맞춤
 
 임계값을 낮출수록 True의 값이 많아짐
 
+
+
+predict() : 예측 값 반환 (0 또는 1)
+
+Predict_proba(): 예측 확률 반환 (0.1233)
+
+
+
+Binarizer 클래스를 이용해 분류결ㄷ계값 조절하여 정밀도와 재현율의 성능 수치 상호보완적으로 조정
+
+임계값이 증가할수록 정밀도 값은 높아지지만 재현율 값은 낮아짐 
+
+
+
+![output](../../../../MultiCampus_ML/threshold_value.png)
+
 ### F1 Score
 
+정밀도와 재현율을 결합한 지표
+
+어느 한쪽으로 치우치지 않는 수치를 나타낼 때 F1스코어가 높음 
+
+
+
 ### ROC AUC 
+
+FPR(FALSE POSITIVE RATE) 이 변할 때 TPR (TRUE POSITIVE RATE)이 어떻게 변하는지를 나타내는 곡선 
+
+![roc_curve](../../../../MultiCampus_ML/roc_curve.png)
+
