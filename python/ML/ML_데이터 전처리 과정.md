@@ -33,3 +33,35 @@
    * 사이킷런에서 제공 
    * StandardScaler()
    * MinMaxScaler()
+
+
+
+## ML 분류 예측 수행 프로세스 
+
+sklearn에서 제공하는 메소드 
+
+* Fit() : ML 모델 학습
+* predict() : 학습된 모델의 예측 
+
+fit()과 predict() 메소드 사용해서 학습과 예측 결과 리턴 
+
+
+
+* 데이터 세트 형태
+* data : 피처 데이터 세트 (ndarray)
+* target : 분류일 경우 레이블 값, 회귀일 경우 숫자 결과값 데이터 세트 (ndarray)
+* target_names : 개별 레이블 이름 (ndarray or list)
+* feature_names : 피처 이름 (ndarray or list)
+* DESCR : 데이터 세트 설명, 각 피처 설명 (string)
+
+
+
+### 모델 구축 프로세스
+
+### 1. 피처의 가공, 변경, 추출을 수행하는 피처 처리
+
+### 2. ML 알고리즘 학습/예측 수행 fit() / predict()
+
+### 3. 모델 평가
+
+### 위의 1,2,3 단계를 반복적으로 수행 
