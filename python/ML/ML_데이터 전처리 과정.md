@@ -96,6 +96,14 @@ df_scaled = pd.DataFrame(data=df_scaled,columns=data.feature_names)
 
 `scaler.fit(df)` 
 
+
+
+1. 가능한 전체 데이터의 스케일링 변환을 적용한 뒤 학습과 테스트 데이터로 분리
+
+   scaler.fit() --> scaler.transform() --> train_test_split()
+
+2. 불가능한 경우 테스트 데이터 변환 시에는 fit()이나 fit_transform()을 적용하지 않고 핛습 데이터로 이미 fit()된 Scaler객체를 이용해 transform()으로 반환 
+
 ## ML 분류 예측 수행 프로세스 
 
 sklearn에서 제공하는 메소드 
