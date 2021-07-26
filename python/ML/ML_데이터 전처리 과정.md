@@ -36,6 +36,66 @@
 
 
 
+## 피처 스케일링
+
+### StandardScaler()
+
+* 개별 피처를 가우시안 정규 분포로 변환 
+* 데이터가 가우시안 분포를 가지고 있다고 가정함 
+  * Support Vector Machine
+  * Linear Regression
+  * Logistic Regression
+
+```python
+from sklearn.preprocessing import StandardScaler
+# standardscaler객체 생성
+scaler = StandardScaler()
+
+# fit()과 transform() 호출 
+scaler.fit(df)
+df_scaled = scaler.transform(df)
+
+# transform() 하면 데이터 세트가 ndarray로 반환
+# ndarray를 다시 dataframe으로 변환
+df_scaled = pd.DataFrame(data=df_scaled,columns=data.feature_names)
+```
+
+* 결과 : 모든 컬럼 값의 평균이 0에 아주 가까운 값으로, 분산은 1에 아주 가까운 값으로 변환 
+
+
+
+### MinMaxScaler()
+
+* 데이터 값을 0과 1사이의 범위 값으로 변환 (음수값이 있다면 -1에서 1값으로 변환)
+* 데이터의 분포가 가우시안 분포가 아닐 경우에 적용가능
+
+```python
+from sklearn.preprocessing import MinMaxScaler
+
+# minmaxscaler객체 생성
+scaler = MinMaxScaler()
+
+# fit()과 transform()호출
+scaler.fit(df)
+df_scaled = scaler.transform(df)
+
+# transform() 하면 데이터 세트가 ndarray로 반환
+# ndarray를 다시 dataframe으로 변환
+df_scaled = pd.DataFrame(data=df_scaled,columns=data.feature_names)
+```
+
+* 결과 : 모든 피처에 0에서 1사이의 값으로 변환되는 스케일링이 적용 
+
+
+
+### 유의점!
+
+학습 데이터 세트와 테스트 데이터 세트에 **Scaler객체를 이용해 **fit()과 transform()을 적용하면 테스트 데이터 세트로는 다시 fit()을 수행하지 않고 학습 데이터 세트로 fit()을 수행한 결과를 이용해 transform() 변환을 적용해야함
+
+즉, 학습 데이터로 fit()이 적용된 스케일링 기준 정보를 그대로 테스트 데이터에 적용
+
+`scaler.fit(df)` 
+
 ## ML 분류 예측 수행 프로세스 
 
 sklearn에서 제공하는 메소드 
