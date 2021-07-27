@@ -99,3 +99,81 @@ graphviz.Source(dot_graph)
 `export_graphviz(dt_clf, out_file="파일명", class_names=결정클래스명칭,
 feature_names=피쳐이름, impurity=True (각 노드에 불순도 표시,지니계수), filled=True(노드 색상 표시))`
 
+* samples =120개 : 전체 데이터가 120개
+* value = [41, 40, 39] : Setosa 41개, Versicolor 40개, Virginica 39개로 구성 
+* sample120개가 value=[41,40,39]의 분포도로 되어 있으므로 지니계수는 0.667 (불순도)
+  * 결정트리는 **불순도를 최소화** 하는 것이 목표 
+* class=setosa는 하위 노드를 가질 경우에 setosa의 개수가 41개로 제일 많다는 의미
+* 색이 짙을수록 지니계수가 낮음
+* 지니계수(불순도)가 0이 될때까지 계속 분류 
+
+
+
+<img src="Untitled.assets/Screenshot 2021-07-27 at 11.07.55 AM.png" alt="Screenshot 2021-07-27 at 11.07.55 AM" style="zoom:50%;" />
+
+#### 결정트리의 하이퍼 파라미터 튜닝
+
+`max_depth` : 결정 트리의 최대 트리 깊이를 제어
+
+e.g. max_depth = 3로 설정하면 더 간단한 결정 트리가 된다
+
+`min_samples_split`: 자식 규칙 노드를 분할해 만들기 위한 최소한의 샘플 데이터 개수
+
+e.g. min_samples_split=4로 설정하면 최소 샘플 개수가 4개 필요. 3개만 있는 경우에는 더 이상 자식 규칙 노드를 위한 분할을 하지 않음
+
+분할할 샘플 개수가 최소 4개는 되어야지 분할 시작 
+
+`min_samples_leaf` : 리프 노드가 될 수 있는 최소 샘플 개수
+
+e.g. min_samples_leaf=4로 설정하면 리프노드가 될 수 있는 최소 sample개수가 4개 
+
+#### 하이퍼 파라미터 튜닝을 통해 브랜치 노드를 줄이고 결정트리를 더 간결하게 만들어서 과적합 발생 방지
+
+### Feature_importance_ 속성
+
+트리를 만드는 결정에 각 피처가 얼마나 중요한지 평가
+
+ndarray로 반환
+
+0과1사이 값
+
+[첫번째 피처 중요도, 두번째 피처 중요도,..]
+
+중요도 값이 클수록 그 노드에서 불순도가 크게 감소 
+
+<img src="Untitled.assets/Screenshot 2021-07-27 at 1.10.09 PM.png" alt="Screenshot 2021-07-27 at 1.10.09 PM" style="zoom:25%;" />
+
+### overfitting
+
+* make_classification() 사용해 과적합 시각화
+
+<img src="Untitled.assets/Screenshot 2021-07-27 at 1.10.39 PM.png" alt="Screenshot 2021-07-27 at 1.10.39 PM" style="zoom:50%;" />
+
+* 분류가 제대로 안되어 있음 (파란색과 빨간색 막 섞여있음)
+* `min_samples_leaf` 이용해 노드 분류 규칙 완화하여 복잡도 줄이기
+
+```python
+from sklearn.datasets import make_classification
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+plt.title("3 Class values with 2 Features Sample data creation")
+
+# 2차원 시각화를 위해서 feature는 2개, 결정값 클래스는 3가지 유형의 classification 샘플 데이터 생성. 
+X_features, y_labels = make_classification(n_features=2, n_redundant=0, n_informative=2,
+                             n_classes=3, n_clusters_per_class=1,random_state=0)
+
+# plot 형태로 2개의 feature로 2차원 좌표 시각화, 각 클래스값은 다른 색깔로 표시됨.
+plt.scatter(X_features[:, 0], X_features[:, 1], marker='o', c=y_labels, s=25, cmap='rainbow', edgecolor='k')
+
+
+```
+
+<img src="Untitled.assets/그림26-결정트리 과적합.JPG" alt="그림26-결정트리 과적합" style="zoom:50%;" />
+
+Min_samples_leaf로 트리생성조건을 제약한 모델이 성능이 더 뛰어남
+
+이유 : 테스트 데이터 세트는 학습 데이터 세트와 다른 데이터 세트인데, 학습 데이터에만 지나치게 최적화된 분류 기준은 오히려 테스트 데이터 세트에서 정확도를 떨어트릴 수 있음
+
+
+
