@@ -22,17 +22,17 @@
 
 ### 보팅의 유형 (hard / soft)
 
-#### hard
+#### hard voting
 
 다수결 원칙 
 
 예측한 결과값들중 다수의 분류기가 결정한 예측값을 최종 보팅 결과값으로 선정하는 것
 
-#### soft
+#### soft voting
 
 분류기들의 레이블 값 결정 확률을 모두 더하고 이를 평균해서 이들 중 확률이 가장 높은 레이블 값을 최종 보팅 결과값으로 선정 
 
-일반적으로 soft voting방법 이용 
+일반적으로 soft voting방법 이용  default값이 voting='soft' 
 
 
 
