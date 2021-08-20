@@ -51,4 +51,4 @@ model.add(MaxPooling2D((2,2)))
 
 ### Flatten
 
-* 2차원 -> 1차원으로
+* 2차원 -> 1차원으로 변환하는 함수
